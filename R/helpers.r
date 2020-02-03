@@ -543,7 +543,7 @@ nc.get.dim.names <- function(f, v) {
 nc.get.dim.axes.from.names <- function(f, v, dim.names) {
   if(missing(dim.names))
     dim.names <- nc.get.dim.names(f, v)
-  return(sapply(dim.names, function(x, y) { ifelse(any(x == names(y)), y[x == names(y)], NA) }, c("lat"="Y", "latitude"="Y", "lon"="X", "longitude"="X", "xc"="X", "yc"="Y", "x"="X", "y"="Y", "time"="T", "timeofyear"="T", "plev"="Z", "lev"="Z", "level"="Z")))
+  return(sapply(dim.names, function(x, y) { ifelse(any(x == names(y)), y[x == names(y)], NA) }, c("lat"="Y", "latitude"="Y", "lon"="X", "longitude"="X", "xc"="X", "yc"="Y", "x"="X", "y"="Y", "time"="T", "timeofyear"="T", "plev"="Z", "lev"="Z", "level"="Z", "X"="X", "Y"="Y", "Z"="Z", "T"="T")))
 }
 
 #' Get a list of dimension variables and axes for a variable's coordinate variable
